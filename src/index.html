@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{"title":"Bright Lights"})
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+
+      <main class="page">
+        <h1 class="page__title visually-hidden">Bright Lights</h1>
+
+        <section class="page__first-screen first-screen">
+          <div class="first-screen__container">
+            <video class="video" poster="@img/main/bg.png" loop>
+              <source
+                src="files/Bright Lights, Kaleena Zanders, KANDY - War For Love.mp4"
+              />
+            </video>
+
+            <h3 class="first-screen__subtitle" data-anim="fade-down">
+              New Single
+            </h3>
+            <h2 class="first-screen__title" data-anim="fade-down">
+              War For Love
+            </h2>
+
+            <div
+              class="first-screen__player player"
+              data-anim="fade-down"
+              data-delay=".5"
+            >
+              <button type="button" class="player__btn">
+                <span class="visually-hidden">Play</span>
+                <i class="fa fa-play" aria-hidden="true"></i>
+              </button>
+
+              <div class="player__progress-bar-container">
+                <input
+                  type="range"
+                  class="player__range"
+                  value="0"
+                  min="0"
+                  max="100"
+                />
+                <div class="player__progress-bar"></div>
+              </div>
+
+              <div class="player__timer">
+                <span class="player__current-time">00:00</span><span>-</span
+                ><span class="player__duration">02:57</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__news news">
+          <div class="news__container">
+            <ul class="news__list">
+              <h2 class="news__title visually-hidden">News</h2>
+              <li class="news__item" data-anim="fade-down">
+                <div class="news__img-ibg news__img-ibg_contain">
+                  <img
+                    src="@img/main/news/news01.png"
+                    alt="news image"
+                    class="news__img"
+                  />
+                </div>
+                <a href="" class="news__link">
+                  <h3 class="news__title">
+                    Working on my upcoming full-lenth album that`s releasing
+                    later this year.
+                  </h3>
+                </a>
+              </li>
+              <li class="news__item" data-anim="fade-down" data-delay=".1">
+                <div class="news__img-ibg news__img-ibg_contain">
+                  <img
+                    src="@img/main/news/news02.png"
+                    alt="news image"
+                    class="news__img"
+                  />
+                </div>
+                <a href="" class="news__link">
+                  <h3 class="news__title">
+                    Halloween vibes. <br />
+                    Listen my new track!
+                  </h3>
+                </a>
+              </li>
+              <li class="news__item" data-anim="fade-down" data-delay=".2">
+                <div class="news__img-ibg news__img-ibg_contain">
+                  <img
+                    src="@img/main/news/news03.png"
+                    alt="news image"
+                    class="news__img"
+                  />
+                </div>
+                <a href="" class="news__link">
+                  <h3 class="news__title">
+                    WarForLove is OUT NOW!! <br />
+                    Stream it here!
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="page__about about">
+          <div class="about__container">
+            <h2 class="about__title title" data-anim="fade-down">
+              <img src="@img/main/about/equalizer.png" alt="equalizer" />
+              <span>Bright Lights</span>
+            </h2>
+            <div class="about__body">
+              <div class="about__col">
+                <p class="about__text" data-anim="fade-down">
+                  Bright Lights is a multi-Grammy nominated singer, songwriter,
+                  DJ and record producer. She has written for numerous
+                  <br /><br />
+                  pop stars including Britney Spears, Justin Bieber, Usher and
+                  Beyoncé. Her catalog has amassed over 1 billion streams
+                  worldwide. More than 100 million of those streams can be
+                  attributed to her artist career and include such hits as
+                  Porter Robinson's "Language," 3LAU's "How You Love Me" and her
+                  own single "Runaway." She was also a featured vocalist on
+                  Zedd's #1 Clarity album. Her latest music video, "Put It
+                  Down," reached 1 million streams in the first week, releasing
+                  independently. Bright Lights is currently in the studio
+                  working on a self-produced album slated for release in 2020.
+                </p>
+                <ul class="about__facts-list" data-anim="fade-down">
+                  <li class="about__facts-item">
+                    <p>Based in: Los&nbsp;Angeles</p>
+                  </li>
+                  <li class="about__facts-item">
+                    <p>Genre: #DancePop</p>
+                  </li>
+                  <li class="about__facts-item">
+                    <p>Founded in 2011</p>
+                  </li>
+                  <li class="about__facts-item">
+                    <p>Label: 333&nbsp;Recordings</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="about__col">
+                <div class="about__img-ibg about__img-ibg_contain">
+                  <img
+                    src="@img/main/about/musician-photo01.png"
+                    alt="musician-photo"
+                    data-anim="fade-right"
+                  />
+                  <img
+                    src="@img/main/about/musician-photo02.png"
+                    alt="musician-photo"
+                    data-anim="fade-right"
+                    data-delay=".07"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__quote quote">
+          <div class="quote__container">
+            <div class="quote__row">
+              <div class="quote__body" data-anim="text-focus-in">
+                <img
+                  src="@img/main/quote/quote.png"
+                  alt="quote"
+                  class="quote__quotation-mark"
+                />
+                <p class="quote__text">
+                  “In an age where mainstream music is designed to be as easily
+                  consumed as possible, listening to Bright Lights is
+                  refreshing, to say the least. Her sound is perfect for radio
+                  but complex enough to separate her from other pop newcomers.”
+                </p>
+                <a href="#" class="quote__site">PopULove.net</a>
+              </div>
+              <img
+                src="@img/main/quote/quote-img.png"
+                alt="quote-img"
+                class="quote__quote-img"
+                data-anim="fade-right-l"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="page__tracks tracks">
+          <div class="tracks__container">
+            <div class="tracks__col">
+              <img
+                src="@img/main/playlist/playlist-img.png"
+                alt="playlist-img"
+                class="tracks__img"
+                data-anim="fade-left-l"
+              />
+            </div>
+            <div class="tracks__col">
+              <h2 class="tracks__title title" data-anim="fade-down">
+                <img src="@img/main/about/equalizer.png" alt="equalizer" />
+                <span>Last tracks</span>
+              </h2>
+              <div
+                class="tracks__player player"
+                data-anim="fade-down"
+                data-delay=".2"
+              >
+                <button type="button" class="player__btn">
+                  <span class="visually-hidden">Play</span>
+                  <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+
+                <audio
+                  src="files/playlist/Eluveitie - Exile Of The Gods.mp3"
+                ></audio>
+
+                <div class="player__progress-bar-container">
+                  <input
+                    type="range"
+                    class="player__range"
+                    value="0"
+                    min="0"
+                    max="100"
+                  />
+                  <div class="player__progress-bar"></div>
+                </div>
+
+                <div class="player__timer">
+                  <span class="player__current-time">00:00</span><span>-</span
+                  ><span class="player__duration">04:07</span>
+                </div>
+              </div>
+
+              <div class="tracks__playlist playlist">
+                <ul class="playlist__list">
+                  <li class="playlist__item _active" data-anim="fade-down">
+                    <span class="playlist__item-id">01</span>
+                    <span class="playlist__item-name"
+                      >3LAU, Bright Lights — How You Love Me</span
+                    >
+                  </li>
+                  <li class="playlist__item" data-anim="fade-down">
+                    <span class="playlist__item-id">02</span>
+                    <span class="playlist__item-name">
+                      Bright Lights, Kaleena Zanders, Kandy — War For Love
+                    </span>
+                  </li>
+                  <li class="playlist__item" data-anim="fade-down">
+                    <span class="playlist__item-id">03</span>
+                    <span class="playlist__item-name"
+                      >03 Pink Is Punk, Benny Benassi, Bright Lights —
+                      Ghost</span
+                    >
+                  </li>
+                  <li class="playlist__item" data-anim="fade-down">
+                    <span class="playlist__item-id">04</span>
+                    <span class="playlist__item-name"
+                      >Hardwell, Dyro, Bright Lights — Never Say Goodbye</span
+                    >
+                  </li>
+                  <li class="playlist__item" data-anim="fade-down">
+                    <span class="playlist__item-id">05</span>
+                    <span class="playlist__item-name"
+                      >Zeds Dead, Dirtyphonics, Bright Lights — Where Are You
+                      Now</span
+                    >
+                  </li>
+                  <li class="playlist__item" data-anim="fade-down">
+                    <span class="playlist__item-id">06</span>
+                    <span class="playlist__item-name"
+                      >Zedd, Bright Lights — Follow You Down
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="tracks__subscription subscription"
+                data-anim="text-focus-in"
+              >
+                <h3 class="subscription__text">Follow me:</h3>
+                <ul class="subscription__social-media-list">
+                  <li class="subscription__social-media-item">
+                    <a href="" class="subscription__social-media-link">
+                      <i class="fa-brands fa-spotify" aria-hidden="true"></i>
+                      <span>Spotify</span>
+                    </a>
+                  </li>
+                  <li class="subscription__social-media-item">
+                    <a href="" class="subscription__social-media-link">
+                      <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                      <span>iTunes</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__gallery gallery">
+          <div class="gallery__container">
+            <ul class="gallery__list">
+              <li
+                class="gallery__item photo photo-vert photo-of-hall"
+                data-anim="opacity"
+              >
+                <a href="" class="gallery__link">
+                  <span>EDC Las Vegas Mainstage</span>
+                </a>
+              </li>
+              <li
+                class="gallery__item photo photo-small photo-front"
+                data-anim="opacity"
+              >
+                <a href="" class="gallery__link">
+                  <span>EDC Las Vegas Mainstage</span>
+                </a>
+              </li>
+              <li
+                class="gallery__item photo photo-small photo-back"
+                data-anim="opacity"
+              >
+                <a href="" class="gallery__link">
+                  <span>EDC Las Vegas Mainstage</span>
+                </a>
+              </li>
+              <li
+                class="gallery__item photo photo-horiz photo-from-stage"
+                data-anim="opacity"
+              >
+                <a href="" class="gallery__link">
+                  <span>EDC Las Vegas Mainstage</span>
+                </a>
+              </li>
+              <li
+                class="gallery__item photo photo-vert photo-poster"
+                data-anim="opacity"
+              >
+                <a href="" class="gallery__link">
+                  <span>EDC Las Vegas Mainstage</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="page__events events" data-anim="opacity">
+          <div class="events__container">
+            <div class="events__slider">
+              <div class="events__swiper">
+                <div class="events__slide">
+                  <div class="card-event">
+                    <div
+                      class="card-event__img-ibg card-event__img-ibg_contain"
+                    >
+                      <img src="@img/main/events/01.png" alt="event 1" />
+                    </div>
+
+                    <div class="card-event__inner">
+                      <div class="card-event__body">
+                        <p class="card-event__location">Chandler, AZ</p>
+                        <a href="" class="card-event__link">
+                          The Park at Wild Horse Pass
+                        </a>
+                      </div>
+                      <div class="card-event__bottom">
+                        <p class="card-event__date">Apr 02 2021</p>
+                        <a href="" class="card-event__button"> Tickets </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="events__slide">
+                  <div class="card-event">
+                    <div
+                      class="card-event__img-ibg card-event__img-ibg_contain"
+                    >
+                      <img src="@img/main/events/02.png" alt="event 2" />
+                    </div>
+
+                    <div class="card-event__inner">
+                      <div class="card-event__body">
+                        <p class="card-event__location">Ibiza, IBZ</p>
+                        <a href="" class="card-event__link">
+                          Swag Ibiza Club
+                        </a>
+                      </div>
+                      <div class="card-event__bottom">
+                        <p class="card-event__date">Jul 08 2021</p>
+                        <a href="" class="card-event__button"> Tickets </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="events__slide">
+                  <div class="card-event">
+                    <div
+                      class="card-event__img-ibg card-event__img-ibg_contain"
+                    >
+                      <img src="@img/main/events/03.png" alt="event 3" />
+                    </div>
+
+                    <div class="card-event__inner">
+                      <div class="card-event__body">
+                        <p class="card-event__location">Ibiza, IBZ</p>
+                        <a href="" class="card-event__link"> El Swing Ibiza </a>
+                      </div>
+                      <div class="card-event__bottom">
+                        <p class="card-event__date">Jul 10 2021</p>
+                        <a href="" class="card-event__button"> Tickets </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="events__slide">
+                  <div class="card-event">
+                    <div
+                      class="card-event__img-ibg card-event__img-ibg_contain"
+                    >
+                      <img src="@img/main/events/01.png" alt="event 4" />
+                    </div>
+
+                    <div class="card-event__inner">
+                      <div class="card-event__body">
+                        <p class="card-event__location">Chandler, AZ</p>
+                        <a href="" class="card-event__link">
+                          The Park at Wild Horse Pass 2
+                        </a>
+                      </div>
+                      <div class="card-event__bottom">
+                        <p class="card-event__date">Apr 02 2021</p>
+                        <a href="" class="card-event__button"> Tickets </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="events__slide">
+                  <div class="card-event">
+                    <div
+                      class="card-event__img-ibg card-event__img-ibg_contain"
+                    >
+                      <img src="@img/main/events/02.png" alt="event 5" />
+                    </div>
+
+                    <div class="card-event__inner">
+                      <div class="card-event__body">
+                        <p class="card-event__location">Ibiza, IBZ</p>
+                        <a href="" class="card-event__link">
+                          Swag Ibiza Club 2
+                        </a>
+                      </div>
+                      <div class="card-event__bottom">
+                        <p class="card-event__date">Jul 08 2021</p>
+                        <a href="" class="card-event__button"> Tickets </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page__pagination swiper-pagination"></div>
+            </div>
+
+            <div class="events__navigation">
+              <button type="button" class="events__button_prev">
+                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="events__button_next">
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- </div> -->
+      </main>
+
+      <!-- todo Доступность -->
+
+      <a class="page__btn-back-to-top" title="Back to top">
+        <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+      </a>
+
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

@@ -1,0 +1,145 @@
+//====================================================================================================
+@use "sass:math";
+//====================================================================================================
+.header {
+	@include adaptiveValue("padding-top", 30, 15, 1920, 320);
+	background-color: transparent;
+	@include adaptiveValue("font-size", 18, 14);
+	z-index: 1;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: percent(65, 920);
+
+		@media (max-width: em(768)) {
+			justify-content: space-between;
+		}
+	}
+	&__logo {
+		width: percent(223, 1110);
+		z-index: 5;
+
+		@media (max-width: em(1280)) {
+			width: rem(223);
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+	&__menu {
+	}
+	&__button {
+		display: none;
+
+		@media (max-width: em(768)) {
+			display: block;
+			position: relative;
+			width: rem(40);
+			height: rem(30);
+			cursor: pointer;
+			z-index: 5;
+		}
+
+		&::before,
+		&::after,
+		:last-child {
+			content: "";
+			position: absolute;
+			right: 0;
+			width: 100%;
+			height: rem(3);
+			background-color: $mainColor;
+			transition: top 0.3s ease 0s, transform 0.3s ease 0s;
+		}
+		&::before {
+			top: 3px;
+		}
+		&::after {
+			bottom: 0;
+		}
+		:last-child {
+			opacity: 1;
+			transition: opacity 0.3s ease 0s;
+		}
+
+		._menu-show & {
+			:last-child {
+				opacity: 0;
+			}
+
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+.menu {
+	@media (min-width: em(768)) {
+		width: percent(632, 1110);
+	}
+
+	@media (max-width: em(768)) {
+		position: fixed;
+		top: 0;
+		left: -100vw;
+		overflow: auto;
+		z-index: 4;
+
+		transition: left 0.3s ease 0s;
+
+		width: 100%;
+		height: 100vh;
+		background-color: #000;
+
+		._menu-show & {
+			left: 0;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: rem(10);
+
+		@media (max-width: em(768)) {
+			align-items: flex-start;
+			flex-direction: column;
+			row-gap: rem(30);
+
+			padding: 150px 30px 30px 30px;
+
+			text-transform: uppercase;
+		}
+	}
+	&__item {
+	}
+	&__link {
+		font-weight: 600;
+		font-size: rem(18);
+		line-height: math.div(27, 18);
+
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $purpleColor;
+			}
+		}
+
+		@media (max-width: em(768)) {
+			@include adaptiveValue("font-size", 22, 18, 768, 320);
+		}
+	}
+}
+//====================================================================================================

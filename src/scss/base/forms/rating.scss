@@ -1,0 +1,84 @@
+// <RATING>
+// Снипет (HTML): rating
+
+//Для кастомной иконки рейтинга
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+//
+
+.rating {
+	display: flex;
+	align-items: flex-end;
+	font-size: 40px;
+	font-size: rem(14);
+	line-height: 0.75;
+	transition: opacity 0.3s ease 0s;
+}
+.rating.rating_sending {
+	opacity: 0.2;
+}
+.rating.rating_set .rating__active,
+.rating.rating_set .rating__item {
+	cursor: pointer;
+}
+
+.rating__body {
+	position: relative;
+}
+$star-blank: "\e90d";
+$star-fill: "\e90e";
+.rating__body::before {
+	//content: "★★★★★";
+	@extend %ic;
+	content: $star-blank$star-blank$star-blank$star-blank$star-blank;
+
+	display: block;
+}
+
+.rating__active {
+	position: absolute;
+	width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.rating__active::before {
+	//content: "★★★★★";
+	@extend %ic;
+	content: $star-fill$star-fill$star-fill$star-fill$star-fill;
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	color: #f89828;
+}
+
+.rating__items {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.rating__item {
+	flex: 0 0 20%;
+	height: 100%;
+	opacity: 0;
+}
+.rating__value {
+	font-size: 50%;
+	line-height: 1;
+	padding: 0px 0px 0px 10px;
+}

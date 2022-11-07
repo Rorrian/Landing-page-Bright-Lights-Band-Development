@@ -1,0 +1,340 @@
+%ic {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*="_icon-"] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
+}
+
+/*._icon-arrow-right:before {
+  content: "\e900";
+  color: #fff;
+}
+
+._icon-cart:before {
+  content: "\e901";
+  color: #424551;
+}
+
+._icon-check-mark:before {
+  content: "\e902";
+  color: #fff;
+}
+
+._icon-comments:before {
+  content: "\e903";
+  color: #787a80;
+}
+
+._icon-favorite:before {
+  content: "\e904";
+  color: #424551;
+}
+
+._icon-footer-facebook:before {
+  content: "\e905";
+  color: #fff;
+}
+
+._icon-footer-instagram:before {
+  content: "\e906";
+  color: #fff;
+}
+
+._icon-footer-pinterest:before {
+  content: "\e907";
+  color: #fff;
+}
+
+._icon-footer-twitter:before {
+  content: "\e908";
+  color: #fff;
+}
+
+._icon-footer-youtube:before {
+  content: "\e909";
+  color: #fff;
+}
+
+._icon-Instagram:before {
+  content: "\e90a";
+  color: #17696a;
+}
+
+._icon-search:before {
+  content: "\e90b";
+  color: #424551;
+}
+
+._icon-slider-arrow:before {
+  content: "\e90c";
+  color: #424551;
+}
+
+._icon-star-blank:before {
+  content: "\e90d";
+  color: #b3b7bc;
+}
+
+._icon-star-fill:before {
+  content: "\e90e";
+  color: #f89828;
+}
+
+._icon-user:before {
+  content: "\e90f";
+  color: #fff;
+}
+
+._icon-upload:before {
+  content: "\e910";
+  color: #9a9ca5;
+}
+
+._icon-bag:before {
+  content: "\e911";
+  color: #424551;
+}
+
+._icon-delete:before {
+  content: "\e912";
+  color: #787a80;
+}
+
+._icon-eyes:before {
+  content: "\e913";
+  color: #424551;
+}
+
+._icon-filters:before {
+  content: "\e914";
+  color: #fff;
+}
+
+._icon-clock:before {
+  content: "\e915";
+  color: #787a80;
+}
+
+._icon-google:before {
+  content: "\e916";
+  color: #17696a;
+}
+
+._icon-iPhone:before {
+  content: "\e917";
+  color: #17696a;
+}
+
+._icon-like:before {
+  content: "\e918";
+  color: #03cea4;
+}
+
+._icon-Linked-In:before {
+  content: "\e919";
+  color: #787a80;
+}
+
+._icon-logout:before {
+  content: "\e91a";
+  color: #424551;
+}
+
+._icon-mail:before {
+  content: "\e91b";
+  color: #17696a;
+}
+
+._icon-home-page:before {
+  content: "\e91c";
+  color: #424551;
+}
+
+._icon-refresh:before {
+  content: "\e91d";
+  color: #424551;
+}
+
+._icon-size:before {
+  content: "\e91e";
+  color: #424551;
+}
+
+._icon-messenger:before {
+  content: "\e91f";
+  color: #17696a;
+}
+
+._icon-circle-check:before {
+  content: "\e920";
+  color: #17696a;
+}*/
+
+
+._icon-arrow-right:before {
+  content: "\e901";
+  color: #fff;
+}
+._icon-cart:before {
+  content: "\e902";
+  color: #424551;
+}
+._icon-check-mark:before {
+  content: "\e903";
+  color: #fff;
+}
+._icon-comments:before {
+  content: "\e904";
+  color: #787a80;
+}
+._icon-favorite:before {
+  content: "\e905";
+  color: #424551;
+}
+._icon-footer-facebook:before {
+  content: "\e906";
+  color: #fff;
+}
+._icon-footer-instagram:before {
+  content: "\e907";
+  color: #fff;
+}
+._icon-footer-pinterest:before {
+  content: "\e908";
+  color: #fff;
+}
+._icon-footer-twitter:before {
+  content: "\e909";
+  color: #fff;
+}
+._icon-footer-youtube:before {
+  content: "\e900";
+  color: #fff;
+}
+._icon-Instagram:before {
+  content: "\e90a";
+  color: #17696a;
+}
+._icon-search:before {
+  content: "\e90b";
+  color: #424551;
+}
+._icon-slider-arrow:before {
+  content: "\e90c";
+  color: #424551;
+}
+._icon-star-blank:before {
+  content: "\e90d";
+  color: #b3b7bc;
+}
+._icon-star-fill:before {
+  content: "\e90e";
+  color: #f89828;
+}
+._icon-user:before {
+  content: "\e90f";
+  color: #fff;
+}
+._icon-upload:before {
+  content: "\e910";
+  color: #9a9ca5;
+}
+._icon-bag:before {
+  content: "\e911";
+  color: #424551;
+}
+._icon-delete:before {
+  content: "\e912";
+  color: #787a80;
+}
+._icon-eyes:before {
+  content: "\e913";
+  color: #424551;
+}
+._icon-filters:before {
+  content: "\e914";
+  color: #fff;
+}
+._icon-clock:before {
+  content: "\e915";
+  color: #787a80;
+}
+._icon-google:before {
+  content: "\e916";
+  color: #17696a;
+}
+._icon-iPhone:before {
+  content: "\e917";
+  color: #17696a;
+}
+._icon-like:before {
+  content: "\e918";
+  color: #03cea4;
+}
+._icon-Linked-In:before {
+  content: "\e919";
+  color: #787a80;
+}
+._icon-logout:before {
+  content: "\e91a";
+  color: #424551;
+}
+._icon-mail:before {
+  content: "\e91b";
+  color: #17696a;
+}
+._icon-home-page:before {
+  content: "\e91c";
+  color: #424551;
+}
+._icon-refresh:before {
+  content: "\e91d";
+  color: #424551;
+}
+._icon-size:before {
+  content: "\e91e";
+  color: #424551;
+}
+._icon-messenger:before {
+  content: "\e91f";
+  color: #17696a;
+}
+._icon-circle-check:before {
+  content: "\e920";
+  color: #17696a;
+}
+._icon-footer-location:before {
+  content: "\e921";
+  color: #fff;
+}
+._icon-footer-mail:before {
+  content: "\e922";
+  color: #fff;
+}
+._icon-footer-phone:before {
+  content: "\e923";
+  color: #fff;
+}
+._icon-header-phone:before {
+  content: "\e924";
+  color: #fba518;
+}
+._icon-apply-arrow:before {
+  content: "\e925";
+  color: #787a80;
+}
+._icon-credit-card:before {
+   content: "\e926";
+   color: #fff;
+ }
