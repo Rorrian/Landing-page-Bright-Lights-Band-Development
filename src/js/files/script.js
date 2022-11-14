@@ -1,3 +1,5 @@
+// Состояние блокировки прокрутки страницы
+let bodyLockStatus = false;
 //====================================================================================================
 //----- Video player -----
 const progressBarCnt_PFS = document.querySelector(
@@ -26,7 +28,6 @@ function videoPlayer() {
   document
     .querySelector(".first-screen .player__btn")
     .addEventListener("click", (e) => {
-      console.log("111111111111");
       changeIcon_PFS();
       video_PFS.paused ? playSong() : video_PFS.pause();
     });
@@ -205,9 +206,35 @@ const headerBtn = document.querySelector(".header__button");
 if (headerBtn) {
   headerBtn.addEventListener("click", (e) => {
     document.documentElement.classList.toggle("_menu-show");
-    document.body.classList.toggle("_lock");
+
+    if (bodyLockStatus) {
+      bodyUnlock();
+    } else {
+      bodyLock();
+    }
   });
 }
+
+function bodyLock() {
+  //Получаем ширину скролла, чтобы его потом скрывать
+  //Если не скрывать скролл, то при открытии попапа будет сдвигаться контент(экран вправо и обратно)
+  const lockPaddingValue =
+    window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+
+  //Добавляем body paddingRight, равный ширине скролла
+  document.body.style.paddingRight = lockPaddingValue;
+
+  //Присваиваем класс для блокировки скролла(происходит в CSS)
+  document.documentElement.classList.add("_lock");
+
+  bodyLockStatus = true;
+}
+function bodyUnlock() {
+  document.body.style.paddingRight = "0px";
+  document.documentElement.classList.remove("_lock");
+  bodyLockStatus = false;
+}
+
 //====================================================================================================
 //----- Прокрутка страницы по клику в меню с JS -----
 
@@ -228,9 +255,9 @@ if (menuLinks) {
         const goToBlock = document.querySelector(link.dataset.goto);
         if (goToBlock) {
           //Если клик в меню-бургере - закрываем
-          if (document.documentElement.classList.contains("_menu-show")) {
+          if (bodyLockStatus) {
             document.documentElement.classList.remove("_menu-show");
-            document.body.classList.remove("_lock");
+            bodyUnlock();
           }
 
           window.scrollTo({

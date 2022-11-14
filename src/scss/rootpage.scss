@@ -26,7 +26,10 @@ body {
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 58%, #000 92.19%);
 	}
 
-	&._lock {
+	// &._lock {
+	// 	overflow: hidden;
+	// }
+	._lock & {
 		overflow: hidden;
 	}
 }
@@ -261,6 +264,10 @@ body {
 		font-weight: 500;
 		line-height: math.div(27, 18);
 		text-align: right;
+
+		@media (max-width: em(768)) {
+			justify-self: flex-start;
+		}
 	}
 }
 //====================================================================================================
